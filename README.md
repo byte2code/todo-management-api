@@ -4,7 +4,7 @@ Spring Boot REST API for managing users and their todos with JPA, H2 persistence
 
 ## Overview
 
-This project demonstrates a compact Spring Boot API for managing users and their todo items. It is designed as a learning project that shows how one-to-many entity mapping, repository-based persistence, and basic CRUD-style REST endpoints work together in a clean, beginner-friendly structure.
+This project demonstrates a compact Spring Boot API for managing users and their todo items. It is designed as a learning project that shows how one-to-many entity mapping, repository-based persistence, and basic CRUD-style REST endpoints work together in a clean, beginner-friendly structure. This version refines todo lifecycle handling by managing todo ownership through the user aggregate.
 
 ## Concepts and Features Covered
 
@@ -12,6 +12,7 @@ This project demonstrates a compact Spring Boot API for managing users and their
 - Spring Data JPA repository pattern
 - H2 in-memory database integration
 - One-to-many relationship between users and todos
+- User-owned todo persistence through aggregate updates
 - `GET` endpoint for retrieving a user by ID
 - `GET` endpoint for retrieving a todo by ID
 - `POST` endpoint for creating a user
@@ -94,6 +95,7 @@ Example request body for creating a todo:
 
 - Demonstrates repository-based CRUD operations with Spring Data JPA
 - Shows how to model a one-to-many user and todo relationship
+- Highlights aggregate-style update and delete handling for nested todo records
 - Uses H2 in-memory persistence to keep setup simple for learning and demos
 - Includes a focused toggle endpoint to show lightweight state updates in a REST API
 
